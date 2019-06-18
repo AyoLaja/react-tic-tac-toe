@@ -12,6 +12,7 @@ export function findWinner(squares) {
     
     for (let i = 0; i < wins.length; i++) {
         const [a, b, c] = wins[i];
+        //Referenced from react's tic tac toe tutorial
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             return squares[a];
         }

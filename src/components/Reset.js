@@ -1,0 +1,11 @@
+import React from 'react'
+
+export default function Square (props) {
+    return (
+        <button className="reset" 
+            disabled={props.disabled} 
+            onClick={() => { props.onClick() }}>
+            Reset
+        </button>
+    )
+}
