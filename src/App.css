@@ -1,33 +1,52 @@
 .App {
   text-align: center;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to top, #0f3443, #34e89e);
+  background: -webkit-linear-gradient(to top, #0f3443, #34e89e);
+  background-repeat: no-repeat;
+  font-family: 'Khula', sans-serif;
+  color: #fff;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.game {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.board {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid inherit;
+  box-shadow: 0 50px 100px -30px rgba(0,0,0,.5);
 }
 
-.App-link {
-  color: #61dafb;
+.row:not(:last-of-type) {
+  border-bottom: 1px solid rgba(47, 79, 79, 0.377); 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row .square:not(:last-of-type) {
+  border-right: 1px solid rgba(47, 79, 79, 0.377); 
 }
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  border: none;
+  background: inherit;
+  height: 100px;
+  width: 100px;
+  font-family: 'Press Start 2P', cursive;
+  vertical-align: middle;
+  box-shadow: none;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  outline: 0;
+}
+
